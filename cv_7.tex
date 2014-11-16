@@ -31,6 +31,8 @@
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 \usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -38,20 +40,16 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{John} % Your first name
-\familyname{Smith} % Your last name
+\firstname{Sampsa} % Your first name
+\familyname{Laapotti} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
-\address{123 Broadway}{City, State 12345}
-\mobile{(000) 111 1111}
-\phone{(000) 111 1112}
-\fax{(000) 111 1113}
-\email{john@smith.com}
-\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-\extrainfo{additional information}
-\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"A witty and playful quotation" - John Smith}
+\address{Servin Maijan Tie 6 F 96}{02150 Espoo}
+\mobile{(+358) 040 539 7421}
+\email{sampsa@laapotti.net}
+\photo[70pt][0.4pt]{pictures/sampsa} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\quote{"Only those who dare to fail greatly can ever achieve greatly." - Robert F. Kennedy}
 
 %----------------------------------------------------------------------------------------
 
@@ -65,14 +63,16 @@
 
 \section{Education}
 
-\cventry{2011--2012}{Masters of Commerce}{The University of California}{Berkeley}{\textit{GPA -- 8.0}}{First Class Honours}  % Arguments not required can be left empty
-\cventry{2007--2010}{Bachelor of Business Studies}{The University of California}{Berkeley}{\textit{GPA -- 7.5}}{Specialized in Commerce}
+\cventry{2011--Ongoing}{Bachelor Studies in Computer Science}{Aalto University}{}{}{}
 
-\section{Masters Thesis}
+\cventry{2009--2010}{Bachelor Studies in Computer Science}{University of Turku}{}{}{}
 
-\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
-\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
-\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+\section{Bachelors Thesis}
+
+\cvitem{Title}{\emph{Authenticating user securely with MIFARE DESFIRE EV1 NFC card}}
+\cvitem{Supervisor}{Professor Rousu, Juho}
+\cvitem{Advisor}{Professor Aura, Tuomas}
+\cvitem{Description}{My Bachelor thesis studied user authentication with MIFARE DESFIRE EV1 NFC-smartcards in a secure way. I developed a proof of concept for user authentication and analyzed it's security and implementation.}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -80,35 +80,33 @@
 
 \section{Experience}
 
-\subsection{Vocational}
+\subsection{Part-time jobs and Summer jobs}
 
-\cventry{2012--Present}{1\textsuperscript{st} Year Analyst}{\textsc{Lehman Brothers}}{Los Angeles}{}{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.
+\cventry{2013 April -- Present}{Junior Consultant}{\textsc{Symfoni Finland}}{Helsinki}{}{Different Consulting assignments regarding IT Service management and usually in Service Now environments. I have worked at Symfoni 2 days a week during school terms and full time on summers.
 \newline{}\newline{}
-Detailed achievements:
+Hilights:
 \begin{itemize}
-\item Learned how to make amazing coffee
-\item Finally determined the reason for \textsc{PC LOAD LETTER}:
+\item Customizing Customer instance for use
+\item Different Integrations:
 \begin{itemize}
-\item Paper jam
-\item Software issues:
-\begin{itemize}
-\item Word not sending the correct data to printer
-\item Windows trying to print in letter format
+\item Ticket integrations ( Incidents and Problem management )
+\item Password reset with MID-server querying Customer AD
 \end{itemize}
-\item Coffee spilled inside printer
-\end{itemize}
-\item Broke the office record for number of kitten pictures in cubicle
+\item Developing Catalog Items and Order process
+\item CMDB Rules Development
 \end{itemize}}
 
 %------------------------------------------------
 
-\cventry{2010--2011}{Summer Intern}{\textsc{Lehman Brothers}}{Los Angeles}{}{Rated "truly distinctive" for Analytical Skills and Teamwork.}
+\cventry{2013 January -- 2013 February}{Service Coordinator}{\textsc{Relacom}}{Vantaa}{}{I worked as a Service Coordinator between the Techicians and the Corporate IT Service making sure that the tickets were handled correctly. Sometimes this also meant calling the end user for more detailed info on his/her order and scheduling the techician for the gig.}
+
+\cventry{Summer 2010}{Package sorter}{\textsc{Itella}}{Turku}{}{I worked as a Package sorter in Turku Sorting center sorting the packages.}
 
 %------------------------------------------------
 
 \subsection{Miscellaneous}
 
-\cventry{2008--2009}{Computer Repair Specialist}{Buy More}{Burbank}{}{Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.}
+\cventry{2006 -- Ongoing}{IT Handyman}{\textsc{Ajanterapia OY}}{}{Salo}{I Am responsible for all the IT for my mothers physiotherapy company. This means being the Helpdesk and catering for all the needs that a 4 person business has.}
 
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
@@ -116,8 +114,7 @@ Detailed achievements:
 
 \section{Awards}
 
-\cvitem{2011}{School of Business Postgraduate Scholarship}
-\cvitem{2010}{Top Achiever Award -- Commerce}
+\cvitem{2013}{Super Symfoniers - Junior Rocket}
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
@@ -125,18 +122,13 @@ Detailed achievements:
 
 \section{Computer skills}
 
-\cvitem{Basic}{\textsc{java}, Adobe Illustrator}
-\cvitem{Intermediate}{\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
-\cvitem{Advanced}{Computer Hardware and Support}
+\cvitem{Basic}{MySQL, ITIL, LDAP, DNS, \textsc{Scala}, \textsc{Clojure}, REST-APIs, \textsc{JavaEE}}
+\cvitem{Intermediate}{\textsc{python}, \textsc{java}, \textsc{html}, \LaTeX, \textsc{css}, git, Linux, Microsoft Windows, ServiceNow}
+\cvitem{Advanced}{\textsc{Javascript}}
 
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS SECTION
 %----------------------------------------------------------------------------------------
-
-\section{Communication Skills}
-
-\cvitem{2010}{Oral Presentation at the California Business Conference}
-\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
@@ -144,9 +136,9 @@ Detailed achievements:
 
 \section{Languages}
 
-\cvitemwithcomment{English}{Mothertongue}{}
-\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
-\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+\cvitemwithcomment{Finnish}{Mothertongue}{}
+\cvitemwithcomment{English}{Fluent}{I use English every day for almost everything related to school and work}
+\cvitemwithcomment{Swedish}{Basic}{Only the mandatory basics taught in High School}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -156,29 +148,31 @@ Detailed achievements:
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
-\cvlistdoubleitem{Piano}{Chess}
-\cvlistdoubleitem{Cooking}{Dancing}
-\cvlistitem{Running}
+\cvlistdoubleitem{Internet}{Self-hosting}
+\cvlistdoubleitem{Electronics, automation}{Amateur Radio operarions (Callsign OH2EGW)}
+\cvlistdoubleitem{Open Source Software}{Student organizations}
+\cvlistdoubleitem{Books}{Science and Rationality}
+\cvlistdoubleitem{Photography}{3d Printing}
 
 %----------------------------------------------------------------------------------------
 %	COVER LETTER
 %----------------------------------------------------------------------------------------
 
-% To remove the cover letter, comment out this entire block
+% % To remove the cover letter, comment out this entire block
 
-\clearpage
+% \clearpage
 
-\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-\date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
-\closing{Sincerely yours,} % Closing phrase
-\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+% \recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% \date{\today} % Letter date
+% \opening{Dear Sir or Madam,} % Opening greeting
+% \closing{Sincerely yours,} % Closing phrase
+% \enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
 
-\makelettertitle % Print letter title
+% \makelettertitle % Print letter title
 
-\lipsum[1-3] % Dummy text
+% \lipsum[1-3] % Dummy text
 
-\makeletterclosing % Print letter signature
+% \makeletterclosing % Print letter signature
 
 %----------------------------------------------------------------------------------------
 
