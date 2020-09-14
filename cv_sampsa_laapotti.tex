@@ -25,6 +25,9 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
+% Use utf-8 like a proper person should
+\usepackage[utf8]{inputenc}
+
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
@@ -50,8 +53,8 @@
 \homepage{sampsa.laapotti.net}{My Blog}
 \extrainfo{sampoz @ IRCnet}
 \email{sampsa@laapotti.net}
-\photo[70pt][0.4pt]{pictures/sampsa} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"Behind every exciting, dramatic failure, there is a more important story about a larger and less dramatic failure that made the first failure possible"}
+\photo[71pt][0.8pt]{pictures/sampsa_kaiku} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"Behind every exciting, dramatic failure, there is a more important story about a larger and less dramatic failure that made the first failure possible"}
 
 %----------------------------------------------------------------------------------------
 
@@ -60,49 +63,39 @@
 \makecvtitle % Print the CV title
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Education}
-
-\cventry{2017--ongoing}{Master's Studies in Computer Science}{\textsc{Aalto University}}{Espoo}{}{}
-
-\cventry{2011--2017}{Bachelor of Science in Computer Science}{\textsc{Aalto University}}{Espoo}{}{}
-
-\cventry{2009--2010}{Bachelor Studies in Computer Science}{\textsc{University of Turku}}{Turku}{}{}
-
-\section{Bachelors Thesis}
-
-\cvitem{Title}{\emph{Authenticating user securely with MIFARE DESFIRE EV1 NFC card}}
-\cvitem{Supervisor}{Professor Rousu, Juho}
-\cvitem{Advisor}{Professor Aura, Tuomas}
-\cvitem{Description}{In my Bachelor thesis I studied user authentication with MIFARE DESFIRE EV1 NFC-smartcards in a secure way. I developed a physical proof of concept and software for user authentication and analyzed it's security and implementation details.}
-
-%----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Experience}
 
-\subsection{Part-time jobs and Summer jobs}
-
-\cventry{2015 May -- Present}{Software Engineer}{\textsc{Gofore Oy}}{Helsinki}{}{I work at Gofore and develop web applications for our customers in an agile manner.
+\cventry{2018 May -- Present}{DevOps/SRE Engineer}{\textsc{Kaiku Health Oy}}{Helsinki}{}{I work as a DevOps/Site Reliability Engineer at Kaiku Health. My work consists of keeping our services running, migrating our legacy services to Kubernetes and monitoring them. I did my thesis to Kaiku about our deployment systems.
 \newline{}
 Hilights:
 \begin{itemize}
-\item Microservices and Continuous Integration
+\item Administration of Linux servers with Ansible
+\item Migrating product from VMs to Kubernetes
+\item Kubernetes and Google Cloud Platform development
+\item Ruby on Rails development
+\item Configuration of CI-pipeline
+\item Logging and monitoring configuration (ELK)
+\end{itemize}}
+
+\cventry{2015 May -- 2018 April}{Software Engineer}{\textsc{Gofore Oy}}{Helsinki}{}{My work at Gofore was developing web applications for our customers as a part of an agile team. My focus was working with microservices in the backend and keeping the AWS servers running with Ansible. I worked at Gofore 3 days a week and studied with the remaining time.
+\newline{}
+Hilights:
+\begin{itemize}
+\item Microservices and Continuous Integration (Jenkins)
 \item Django and Mezzanine CMS
 \item SAML and Shibboleth authentication
-\item Node.js and Express
-\item AngularJS
+\item Node.js, Express and AngularJS
 \item AWS, Ansible and Infrastructure as Code
 \end{itemize}}
 
-\cventry{2013 April -- 2015 April}{Junior Consultant}{\textsc{Symfoni Finland}}{Helsinki}{}{My work at Symfoni consisted of different consulting assignments regarding IT Service management customers using Service Now environments. I worked at Symfoni for 2 days a week during school terms and full time on summers. On the summer of 2014 I Worked for 3 Days a week at Symfoni in order to use the other 2 days to work in a startup side project.
+\cventry{2013 April -- 2015 April}{Junior Consultant}{\textsc{Symfoni Finland}}{Helsinki}{}{My work at Symfoni consisted of different consulting assignments regarding IT Service management customers using Service Now environments. I worked at Symfoni for 2 days a week during school terms and full time on summers.
 \newline{}
 Hilights:
 \begin{itemize}
-\item Customizing Customer instance for use
+%\item Customizing Customer instance for use
 \item Backend and Frontend Javascript development with ServiceNow tools
 \item Different Integrations:
 \begin{itemize}
@@ -110,15 +103,36 @@ Hilights:
 \item Password reset with MID-server querying Customer AD
 \item CMDB Integrations
 \end{itemize}
-\item Developing Catalog Items and Order process
-\item CMDB Development
+%\item Developing Catalog Items and Order process
+%\item CMDB Development
 \end{itemize}}
 
 %------------------------------------------------
 
-\subsection{Miscellaneous}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-\cventry{2006 -- Ongoing}{IT Handyman}{\textsc{Ajanterapia OY}}{}{Salo}{I am responsible for all the IT for my mother's physiotherapy company. This means being the Helpdesk and catering for all the needs that a 4 person business has.}
+\section{Education}
+
+\cventry{2017--2020}{Master of Science in Computer, Communication and Information Sciences}{\textsc{Aalto University}}{Espoo}{}{}
+
+\cventry{2011--2017}{Bachelor of Science in Computer Science}{\textsc{Aalto University}}{Espoo}{}{}
+
+\cventry{2009--2010}{Bachelor Studies in Computer Science}{\textsc{University of Turku}}{Turku}{}{}
+
+\section{Masters thesis}
+% \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+\cvitem{Title}{\emph{A Case Study Measuring Changes in Deployment between Virtual
+Machines and Orchestrated Containers}}
+\cvitem{Supervisor}{Professor Hyvönen, Eero}
+\cvitem{Advisor}{DI Lääkkölä, Riku}
+\cvitem{Description}{In my masters thesis I researched how a transition from legacy Ansible managed virtual machines to Google cloud based Kubernetes solution affects the software deployment performance of Kaiku Health. This was done by instrumenting the deployment processes in both systems and comparing data with statistical tests. Results were inconclusive in the scope of the thesis. After the thesis I have continued to research this and results after the thesis are conclusive that migration has improved at least some parts of the software deployment performance.}
+\cvitem{Grade}{4}
+
+%% \subsection{Miscellaneous}
+
+%% \cventry{2006 -- 2019}{IT Handyman}{\textsc{Ajanterapia OY}}{}{Salo}{I am responsible for all the IT for my mother's physiotherapy company. This means being the Helpdesk and catering for all the needs that a 4 person business has.}
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
@@ -126,9 +140,9 @@ Hilights:
 
 \section{Computer skills}
 
-\cvitem{Basic}{MySQL, ITIL, LDAP, DNS, Ruby on Rails, \textsc{Scala}, \textsc{Clojure}, \textsc{C},  \textsc{C++}, \textsc{SAML}, \textsc{Shibboleth}, \textsc{java}, Make, vim}
-\cvitem{Intermediate}{\LaTeX, \textsc{CSS}, \textsc{Docker} git, \textsc{PostgreSQL}, Express, REST-APIs, Linux server administration, EC2, Cloudformation, RDS, ServiceNow, NodeJS, AngularJS, Nginx, Gulp, \textsc{Ansible}, Shell Scripting, Microservice architecture, SQL, PostreSQL, Tmux, Emacs}
-\cvitem{Advanced}{\textsc{Javascript},\textsc{Python}, \textsc{HTML5}, \textsc{Django}}
+\cvitem{Basic}{MySQL, ITIL, LDAP, DNS, \textsc{Scala}, \textsc{Clojure}, \textsc{C},  \textsc{C++}, \textsc{SAML}, \textsc{Shibboleth}, \textsc{java}, Make, vim}
+\cvitem{Intermediate}{\LaTeX, \textsc{CSS}, Ruby on Rails, \textsc{Docker} git, \textsc{PostgreSQL}, Express, REST-APIs, Linux server administration, EC2, Cloudformation, RDS, ServiceNow, NodeJS, AngularJS, Nginx, Gulp, \textsc{Ansible}, Shell Scripting, Microservice architecture, SQL, PostreSQL, Tmux, Emacs, \textsc{Javascript}, CI/CD Pipelines (Gitlab, CircleCI, Github), Elasticsearch, Logstash, Kibana}
+\cvitem{Advanced}{\textsc{Python}, \textsc{HTML5}, \textsc{Django}, \textsc{Ansible}}
 
 %----------------------------------------------------------------------------------------
 %	Club activity
@@ -137,7 +151,7 @@ Hilights:
 
 \section{Club and Voluntary activities}
 
-\cvitem{2012-14}{\textsc{Tietokilta}, Master of Internal activies, Master of External affairs, Chairman of the Board}
+\cvitem{2012-14}{\textsc{Tietokilta}, Master of Internal activies (2012), Master of External affairs (2013), Chairman of the Board (2014)}
 \cvitem{2012-14}{\textsc{Aalto University}, Tutor for the Freshmen}
 \cvitem{2011}{\textsc{Digit}, Master of Communications}
 
@@ -146,11 +160,11 @@ Hilights:
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Languages}
+%% \section{Languages}
 
-\cvitemwithcomment{Finnish}{Native}{Born and raised in a Finnish speaking environment}
-\cvitemwithcomment{English}{Fluent}{I use English every day for almost everything related to school and work}
-\cvitemwithcomment{Swedish}{Basic}{Only the mandatory basics taught in High School and in University}
+%% \cvitemwithcomment{Finnish}{Native}{Born and raised in a Finnish speaking environment}
+%% \cvitemwithcomment{English}{Fluent}{I use English every day for almost everything related to school and work}
+%% \cvitemwithcomment{Swedish}{Basic}{Only the mandatory basics taught in High School and in University}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
@@ -160,7 +174,7 @@ Hilights:
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
-\cvlistitem{Internet, Open Source and Linux, Electronics, Amateur Radio operations (Callsign OH2EGW), Books, Science and Rationality, Photography, 3d Printing, Infosec, Game theory, Math, Space and Astronomy, Science Fiction}
+\cvlistitem{Internet, Open Source and Linux, Electronics, Amateur Radio operations (Callsign OH2EGW), Books, Science and Rationality, Photography, 3d Printing, Infosec, Game theory, Math, Statistics, Non-linear dynamics, Space and Astronomy, Science Fiction}
 
 
 %----------------------------------------------------------------------------------------
